@@ -3,7 +3,7 @@ import Image from 'next/image'
 import styles from '../styles/Home.module.css'
 import Typography from '@material-ui/core/Typography';
 import { makeStyles } from '@material-ui/core/styles';
-
+import PhoneIcon from '@material-ui/icons/Phone'
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -38,8 +38,8 @@ function Footer() {
         <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
         Neal Butler
         </Typography>
-        <Typography variant="subtitle2" align="center" color="textSecondary" component="p">
-        706.463.8523
+        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        <a href='tel:7064638523'><PhoneIcon style={{height:'.8rem'}}/> 706.463.8523</a>
         </Typography>
       </footer>
   )
