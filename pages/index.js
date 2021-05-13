@@ -35,11 +35,11 @@ function Footer() {
         <Typography variant="h5" align="center" gutterBottom>
           Contact
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
+        <Typography variant="h3" align="center" color="textSecondary" component="p">
         Neal Butler
         </Typography>
-        <Typography variant="subtitle1" align="center" color="textSecondary" component="p">
-        <a href='tel:7064638523'><PhoneIcon style={{height:'.8rem'}}/> 706.463.8523</a>
+        <Typography variant="h4" align="center" color="textSecondary" component="p">
+        <a href='tel:7064638523'>706.463.8523</a>
         </Typography>
       </footer>
   )
