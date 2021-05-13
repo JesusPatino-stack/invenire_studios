@@ -23,26 +23,27 @@ export default function Home() {
       </Head>
 
       <main className={classes.main} >
-        <div className={classes.heroContent} > 
+        {/* <div className={classes.heroContent} >  */}
         <img  className={classes.heroContent}src="/img/hero.bmp" />
-        </div>
+        {/* </div> */}
         {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
-        <Box m={5}></Box>
-        <Typography variant="h1" align="center" gutterBottom className={classes.title}>
+        {/* <Box m={5}></Box> */}
+        {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
           Invenire Studios
-        </Typography>
+        </Typography> */}
         {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
         <Typography
-          variant="subtitle1"
+          variant="h4"
           align="center"
-          color="textSecondary"
+          color="white"
           component="p"
         >
           Artist and Technologist
         </Typography>
+        <Footer />
       </main>
 
-      <Footer />
+      
     </div>
     // </ThemeProvider>
   );
@@ -52,13 +53,13 @@ function Footer() {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
-      <Typography variant="h5" align="center" gutterBottom>
+      {/* <Typography variant="h5" align="center" gutterBottom>
         Contact
-      </Typography>
+      </Typography> */}
       <Typography
         variant="h3"
         align="center"
-        color="textSecondary"
+        color="white"
         component="p"
       >
         Neal Butler
@@ -66,7 +67,7 @@ function Footer() {
       <Typography
         variant="h4"
         align="center"
-        color="textSecondary"
+        color="white"
         component="p"
       >
         <a href="tel:7064638523">706.463.8523</a>
@@ -83,7 +84,8 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh",
+    height: "100%",
+    backgroundColor: 'black'
   },
   main: {
     padding: "5rem 0",
@@ -92,15 +94,19 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
+    backgroundColor: 'black',
+    verticalAlign: 'top'
   },
   icon: {
     marginRight: theme.spacing(2),
   },
   heroContent: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: 'black',
     padding: theme.spacing(8, 0, 6),
     // height:"100rem",
-    width:"100%"
+    width:"100%",
+    alignContent: 'center',
+    // verticalAlign: 'top'
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -121,8 +127,10 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   footer: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: 'black',
+    color: 'white',
     padding: theme.spacing(6),
+    width: '100%'
   },
   title: {
     font: 'Roboto',
@@ -153,6 +161,12 @@ const useStyles = makeStyles((theme) => ({
     button: {
       fontStyle: 'italic',
     },
+    h3: {
+      color: 'white'
+    },
+    h4: {
+      color: 'white'
+    }
   },
 }));
 
