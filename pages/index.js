@@ -31,7 +31,7 @@ export default function Home() {
         <Typography variant="h1" align="center" gutterBottom className={classes.title}>
           Invenire Studios
         </Typography>
-        <Image src="/img/hero.bmp" alt="hero" width={600} height={500} />
+        {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
         <Typography
           variant="subtitle1"
           align="center"
