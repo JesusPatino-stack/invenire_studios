@@ -15,6 +15,7 @@ export default function Home() {
         <h1 className={styles.title}>
           Hello Neil
         </h1>
+        <div>im in the house Niel! Im right behind you Niel!!!</div>
 
         <p className={styles.description}>
           Get started by editing{' '}
