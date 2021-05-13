@@ -1,9 +1,10 @@
-import Head from 'next/head'
-import Image from 'next/image'
-import styles from '../styles/Home.module.css'
-import Typography from '@material-ui/core/Typography';
-import { makeStyles } from '@material-ui/core/styles';
-import PhoneIcon from '@material-ui/icons/Phone'
+import Head from "next/head";
+import Image from "next/image";
+import styles from "../styles/Home.module.css";
+import Typography from "@material-ui/core/Typography";
+import { makeStyles } from "@material-ui/core/styles";
+import PhoneIcon from "@material-ui/icons/Phone";
+import { Box } from "@material-ui/core";
 export default function Home() {
   return (
     <div className={styles.container}>
@@ -14,35 +15,51 @@ export default function Home() {
       </Head>
 
       <main className={styles.main}>
-        
-        <h1 className={styles.title}>
+        <Box m={5}></Box>
+        <Typography variant="h1" align="center" gutterBottom>
           Invenire Studios
-        </h1>
-        <Image src='/img/hero.bmp' alt='hero' width={600} height={500}/>
-        <div>Artist and Technologist</div>
-
+        </Typography>
+        <Image src="/img/hero.bmp" alt="hero" width={600} height={500} />
+        <Typography
+          variant="subtitle1"
+          align="center"
+          color="textSecondary"
+          component="p"
+        >
+          Artist and Technologist
+        </Typography>
       </main>
 
-      <Footer/>
+      <Footer />
     </div>
-  )
+  );
 }
 
 function Footer() {
   const classes = useStyles();
   return (
     <footer className={classes.footer}>
-        <Typography variant="h5" align="center" gutterBottom>
-          Contact
-        </Typography>
-        <Typography variant="h3" align="center" color="textSecondary" component="p">
+      <Typography variant="h5" align="center" gutterBottom>
+        Contact
+      </Typography>
+      <Typography
+        variant="h3"
+        align="center"
+        color="textSecondary"
+        component="p"
+      >
         Neal Butler
-        </Typography>
-        <Typography variant="h4" align="center" color="textSecondary" component="p">
-        <a href='tel:7064638523'>706.463.8523</a>
-        </Typography>
-      </footer>
-  )
+      </Typography>
+      <Typography
+        variant="h4"
+        align="center"
+        color="textSecondary"
+        component="p"
+      >
+        <a href="tel:7064638523">706.463.8523</a>
+      </Typography>
+    </footer>
+  );
 }
 
 const useStyles = makeStyles((theme) => ({
@@ -61,12 +78,12 @@ const useStyles = makeStyles((theme) => ({
     paddingBottom: theme.spacing(8),
   },
   card: {
-    height: '100%',
-    display: 'flex',
-    flexDirection: 'column',
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
   },
   cardMedia: {
-    paddingTop: '56.25%', // 16:9
+    paddingTop: "56.25%", // 16:9
   },
   cardContent: {
     flexGrow: 1,
