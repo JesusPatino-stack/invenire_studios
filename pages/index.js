@@ -8,14 +8,16 @@ import PhoneIcon from "@material-ui/icons/Phone";
 import { Box } from "@material-ui/core";
 import "@fontsource/roboto";
 import PropTypes from "prop-types";
-import AppBar from "@material-ui/core/AppBar";
+import Tabinator from "./Tabinator";
 import Toolbar from "@material-ui/core/Toolbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-
+import Paper from '@material-ui/core/Paper';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
 // import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 // let theme = createMuiTheme();
 // theme = responsiveFontSizes(theme);
@@ -43,60 +45,22 @@ HideOnScroll.propTypes = {
   window: PropTypes.func,
 };
 
-function HideAppBar(props) {
-  const classes = useStyles();
-  return (
-    <>
-      <CssBaseline />
-      <HideOnScroll {...props}>
-        <AppBar style={{ background: "black", display:'inline'}}>
-          <Toolbar>
-            {/* <Typography variant="h6" style={{ background: "black", marginLeft: "auto", }}></Typography> */}
-            <SimpleBottomNavigation
-              style={{ display: "inline", background: "black", margin: "auto", }}
-            />
-          </Toolbar>
-        </AppBar>
-      </HideOnScroll>
-
-      <hr />
-
-    </>
-  );
-}
-
-export function SimpleBottomNavigation() {
-  const classes = useStyles();
-  const [value, setValue] = React.useState(0);
-
-  return (
-    <BottomNavigation
-      value={value}
-      onChange={(event, newValue) => {
-        setValue(newValue);
-      }}
-      showLabels
-     className={classes.label}
-      style={{ background: "black", fontSize: '20px' }}
-    >
-      <BottomNavigationAction label="Art" style={{ color: "white", margin: "auto" }} />
-      <BottomNavigationAction label="CAD" style={{ color: "white", margin: "auto"}} />
-      <BottomNavigationAction label="Events/Promotions" style={{ color: "white", margin: "auto" }} />
-    </BottomNavigation>
-  );
-}
 export default function Home() {
   const classes = useStyles();
+  
   return (
-    // <ThemeProvider theme={theme}>
+    // <ThemeProvider theme={theme}> 
+    <>
+    <Tabinator />
     <div className={classes.container}>
       <Head>
         <title>Invenire Studios</title>
         <meta name="description" content="Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      <HideAppBar />
+      
       <main className={classes.main}>
+       
         {/* <div className={classes.heroContent} >  */}
         <img  className={classes.heroContent}src="/img/hero.bmp" />
         {/* </div> */}
@@ -113,6 +77,7 @@ export default function Home() {
         <Footer />
       </main>
     </div>
+    </>
     // </ThemeProvider>
   );
 }
@@ -150,7 +115,7 @@ const useStyles = makeStyles((theme) => ({
     justifyContent: "center",
     alignItems: "center",
     height: "100vh",
-    backgroundColor: "gray",
+    backgroundColor: "#f5f5f5",
     verticalAlign: 'top',
     maxWidth: '100%'
   },
@@ -161,15 +126,15 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    backgroundColor: "gray",
+    backgroundColor: "#f5f5f5",
     verticalAlign: "top",
-    width: "100%",
+    width: "80%",
   },
   icon: {
     marginRight: theme.spacing(2),
   },
   heroContent: {
-    backgroundColor: "gray",
+    backgroundColor: "#f5f5f5",
     // padding: theme.spacing(8, 0, 6),
     // height:"100rem",
     width: "100%",
@@ -241,17 +206,19 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   label: {
-    fontFamily: theme.typography.fontFamily,
-    fontSize: theme.typography.pxToRem(20),
-    opacity: 1,
-    transition: 'font-size 0.2s, opacity 0.2s',
-    transitionDelay: '0.1s',
-    '&$iconOnly': {
-      opacity: 0,
-      transitionDelay: '0s',
-    },
-    '&$selected': {
-      fontSize: theme.typography.pxToRem(14),
-    },
+    // fontFamily: theme.typography.fontFamily,
+    fontSize: "20px",
+    // opacity: 1,
+    // transition: 'font-size 0.2s, opacity 0.2s',
+    // transitionDelay: '0.1s',
+    // '&$iconOnly': {
+    //   opacity: 0,
+    //   transitionDelay: '0s',
+    // },
+    // '&$selected': {
+    //   fontSize: theme.typography.pxToRem(14),
+    // },
+     color: "white"
   },
+ 
 }));
