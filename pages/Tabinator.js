@@ -160,7 +160,8 @@ const useStyles = makeStyles((theme) => ({
     // '&$selected': {
     //   fontSize: theme.typography.pxToRem(14),
     // },
-    // color: "white",
+    color: "white",
+    backgroundColor: "black"
   },
 }));
 
@@ -202,7 +203,11 @@ export default function FullWidthTabs() {
           aria-label="full width tabs example"
         >
           <Tab className={classes.label} label="Art" {...a11yProps(0)} />
-          <Tab className={classes.label} label="CAD" {...a11yProps(1)} />
+          <Tab
+            className={classes.label}
+            label="CAD" 
+            {...a11yProps(1)} 
+          />
           <Tab
             className={classes.label}
             label="Events/Promotions"
