@@ -236,7 +236,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://media.giphy.com/media/xTiN0qCwzOa5OFEeac/giphy.gif"
                     title="art 2"
                     description="on display at Level Up"
                     condition="on display"
@@ -245,7 +245,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://media.giphy.com/media/xUPGcFqkQOQVJXCH4Y/giphy.gif"
                     title="art 3"
                     description="on display at Level Up"
                     condition="on display"
@@ -254,7 +254,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://media.giphy.com/media/l4FGDAXBH12tFuVcQ/giphy.gif"
                     title="art 2"
                     description="on display at Level Up"
                     condition="on display"
@@ -263,7 +263,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://media.giphy.com/media/wI6OYhLvSkfhjs3m7W/giphy.gif"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
@@ -272,7 +272,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://media.giphy.com/media/L6sv8tljSGta961jN4/giphy.gif"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
@@ -281,7 +281,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://media.giphy.com/media/wA4TfFmdObEoUTUA6A/giphy.gif"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
@@ -290,7 +290,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="https://gph.is/g/Zr5DY1l"
+                    img="https://media.giphy.com/media/dxVmEA4S4SMdFPVJPA/giphy.gif"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
@@ -299,7 +299,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="https://gph.is/g/EG7AvR3"
+                    img="https://media.giphy.com/media/7IXLXtQYoUIt439UHX/giphy.gif"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
@@ -308,7 +308,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="https://gph.is/g/Zl1GeWg"
+                    img="https://media.giphy.com/media/aYqS5GucN5z8uFo4oc/giphy.gif"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
