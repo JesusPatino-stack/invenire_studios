@@ -5,6 +5,8 @@ import Image from "next/image";
 import Typography from "@material-ui/core/Typography";
 import { makeStyles } from "@material-ui/core/styles";
 import PhoneIcon from "@material-ui/icons/Phone";
+import Face from "@material-ui/icons/Face";
+import Mail from "@material-ui/icons/Mail";
 import { Box } from "@material-ui/core";
 import "@fontsource/roboto";
 import PropTypes from "prop-types";
@@ -51,32 +53,13 @@ export default function Home() {
   return (
     // <ThemeProvider theme={theme}> 
     <>
-    <Tabinator />
-    <div className={classes.container}>
-      <Head>
+  <Head>
         <title>Invenire Studios</title>
         <meta name="description" content="Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-      
-      <main className={classes.main}>
-       
-        {/* <div className={classes.heroContent} >  */}
-        <img  className={classes.heroContent}src="/img/hero.bmp" />
-        {/* </div> */}
-        {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
-        {/* <Box m={5}></Box> */}
-        {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
-          Invenire Studios
-        </Typography> */}
-        {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
-        <Typography variant="h4" align="center" color="white" component="p">
-          Artist and Technologist
-        </Typography>
-        <br/><br/>
-        
-      </main>
-    </div>
+    <Tabinator />
+
     <Footer />
     </>
     // </ThemeProvider>
@@ -92,16 +75,15 @@ function Footer() {
         Contact
       </Typography> */}
     <footer className={classes.footer}>
-      <Typography variant="h5" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-        Neal Butler
+      <Typography variant="h4" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
+       <Face/>   Neal Butler
       </Typography>
-      <Typography variant="h5" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-        <a href="mailto:InvenireStudios@gmail.com">InvenireStudios@gmail.com</a>
+      <Typography variant="h4" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
+        <Mail/><a href="mailto:InvenireStudios@gmail.com">  InvenireStudios@gmail.com</a>
       </Typography>
-      <Typography variant="h5" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-        <a href="tel:7064638523">706.463.8523</a>
+      <Typography variant="h4" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
+      <PhoneIcon /><a href="tel:7064638523">   706.463.8523</a>
       </Typography>
-      
     </footer>
     </>
   );
@@ -115,7 +97,7 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100vh",
+    height: "80vh",
     backgroundColor: "#f5f5f5",
     verticalAlign: 'top',
     maxWidth: '100%'

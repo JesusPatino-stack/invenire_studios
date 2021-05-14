@@ -1,34 +1,70 @@
-import React from "react";
-import { makeStyles } from "@material-ui/core/styles";
-import Paper from "@material-ui/core/Paper";
-import Tabs from "@material-ui/core/Tabs";
-import Tab from "@material-ui/core/Tab";
-import "@fontsource/luckiest-guy";
-import Typography from "@material-ui/core/Typography";
-const useStyles = makeStyles({
-  root: {
-    flexGrow: 1,
-    width: "100%",
-    // backgroundColor: 'black',
-    opacity: "90%",
-    // color: "white"
-    display: "flex",
-  },
-});
+import React from 'react';
+import PropTypes from 'prop-types';
+import SwipeableViews from 'react-swipeable-views';
+import { makeStyles, useTheme } from '@material-ui/core/styles';
+import AppBar from '@material-ui/core/AppBar';
+import Tabs from '@material-ui/core/Tabs';
+import Tab from '@material-ui/core/Tab';
+import Typography from '@material-ui/core/Typography';
+import Box from '@material-ui/core/Box';
 
-export default function CenteredTabs() {
+function TabPanel(props) {
+  const { children, value, index, ...other } = props;
+
+  return (
+    <div
+      role="tabpanel"
+      hidden={value !== index}
+      id={`full-width-tabpanel-${index}`}
+      aria-labelledby={`full-width-tab-${index}`}
+      {...other}
+    >
+      {value === index && (
+        <Box p={3}>
+          <Typography>{children}</Typography>
+        </Box>
+      )}
+    </div>
+  );
+}
+
+TabPanel.propTypes = {
+  children: PropTypes.node,
+  index: PropTypes.any.isRequired,
+  value: PropTypes.any.isRequired,
+};
+
+function a11yProps(index) {
+  return {
+    id: `full-width-tab-${index}`,
+    'aria-controls': `full-width-tabpanel-${index}`,
+  };
+}
+
+const useStyles = makeStyles((theme) => ({
+  root: {
+    backgroundColor: theme.palette.background.paper,
+    width: "100%",
+  },
+}));
+
+export default function FullWidthTabs() {
   const classes = useStyles();
+  const theme = useTheme();
   const [value, setValue] = React.useState(0);
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
   };
 
+  const handleChangeIndex = (index) => {
+    setValue(index);
+  };
+
   return (
-    <>
-      <Paper className={classes.root}>
-        {" "}
-        <Typography
+    <div className={classes.root}>
+      <AppBar position="static" color="default">
+      <Typography
           style={{
             fontFamily: "Luckiest Guy",
             color: "yellow",
@@ -41,20 +77,66 @@ export default function CenteredTabs() {
         >
           Invenire Studios
         </Typography>
-      </Paper>
-      <Paper className={classes.root}>
         <Tabs
           value={value}
           onChange={handleChange}
           indicatorColor="primary"
           textColor="primary"
-          centered
+          variant="fullWidth"
+          aria-label="full width tabs example"
         >
-          <Tab label="Art" />
-          <Tab label="CAD" />
-          <Tab label="Events/Promotions" />
+          <Tab label="Art" {...a11yProps(0)} />
+          <Tab label="CAD" {...a11yProps(1)} />
+          <Tab label="Events/Promotions" {...a11yProps(2)} />
         </Tabs>
-      </Paper>
-    </>
+      </AppBar>
+      <SwipeableViews
+        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        index={value}
+        onChangeIndex={handleChangeIndex}
+      >
+        <TabPanel value={value} index={0} dir={theme.direction}>
+        <div className={classes.container}>
+      <main className={classes.main}>
+        {/* <div className={classes.heroContent} >  */}
+        <img  className={classes.heroContent}src="/img/hero.bmp" />
+        {/* </div> */}
+        {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
+        {/* <Box m={5}></Box> */}
+        {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
+          Invenire Studios
+        </Typography> */}
+        {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
+        <Typography variant="h4" align="center" color="white" component="p">
+          Art
+        </Typography>
+        <br/><br/>
+      </main>
+    </div>
+        </TabPanel>
+        <TabPanel value={value} index={1} dir={theme.direction}>
+        <div className={classes.container}>
+      <main className={classes.main}>
+        {/* <div className={classes.heroContent} >  */}
+        <img  className={classes.heroContent}src="/img/mnriser.bmp" />
+        {/* </div> */}
+        {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
+        {/* <Box m={5}></Box> */}
+        {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
+          Invenire Studios
+        </Typography> */}
+        {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
+        <Typography variant="h4" align="center" color="white" component="p">
+          Art
+        </Typography>
+        <br/><br/>
+      </main>
+    </div>
+        </TabPanel>
+        <TabPanel value={value} index={2} dir={theme.direction}>
+          Events and promotions
+        </TabPanel>
+      </SwipeableViews>
+    </div>
   );
 }
