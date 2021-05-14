@@ -1,12 +1,15 @@
-import React from 'react';
-import PropTypes from 'prop-types';
-import SwipeableViews from 'react-swipeable-views';
-import { makeStyles, useTheme } from '@material-ui/core/styles';
-import AppBar from '@material-ui/core/AppBar';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
-import Typography from '@material-ui/core/Typography';
-import Box from '@material-ui/core/Box';
+import React from "react";
+import PropTypes from "prop-types";
+import SwipeableViews from "react-swipeable-views";
+import { makeStyles, useTheme } from "@material-ui/core/styles";
+import AppBar from "@material-ui/core/AppBar";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
+import Typography from "@material-ui/core/Typography";
+import Box from "@material-ui/core/Box";
+import "@fontsource/luckiest-guy";
+import ImgMediaCard from "./card";
+import { Grid } from "@material-ui/core";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -37,14 +40,127 @@ TabPanel.propTypes = {
 function a11yProps(index) {
   return {
     id: `full-width-tab-${index}`,
-    'aria-controls': `full-width-tabpanel-${index}`,
+    "aria-controls": `full-width-tabpanel-${index}`,
   };
 }
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    backgroundColor: theme.palette.background.paper,
+    backgroundColor: "#f5f5f5",
     width: "100%",
+  },
+  container: {
+    minHeight: "100vh",
+    // padding:"0 0.5rem",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    // height: "80vh",
+    backgroundColor: "#f5f5f5",
+    verticalAlign: "top",
+    maxWidth: "100%",
+  },
+  main: {
+    // padding: "5rem 0",
+    flex: "0",
+    display: "flex",
+    flexDirection: "column",
+    justifyContent: "center",
+    alignItems: "center",
+    backgroundColor: "#f5f5f5",
+    verticalAlign: "top",
+    width: "80%",
+  },
+  icon: {
+    marginRight: theme.spacing(2),
+  },
+  heroContent: {
+    backgroundColor: "#f5f5f5",
+    // padding: theme.spacing(8, 0, 6),
+    // height:"100rem",
+    width: "100%",
+    // alignContent: 'center',
+    verticalAlign: "top",
+    objectFit: "cover",
+  },
+  heroButtons: {
+    marginTop: theme.spacing(4),
+  },
+  cardGrid: {
+    paddingTop: theme.spacing(8),
+    paddingBottom: theme.spacing(8),
+  },
+  card: {
+    height: "100%",
+    display: "flex",
+    flexDirection: "column",
+  },
+  cardMedia: {
+    paddingTop: "56.25%", // 16:9
+  },
+  cardContent: {
+    flexGrow: 1,
+  },
+  footer: {
+    backgroundColor: "#273238",
+    color: "white",
+    padding: theme.spacing(6),
+    width: "100%",
+    display: "flex",
+    flexDirection: "row",
+    alignVertical: "center",
+  },
+  title: {
+    font: "Roboto",
+    weight: "light",
+    fontSize: "96px",
+    letterSpacing: "-1.5px",
+  },
+  typography: {
+    // Use the system font instead of the default Roboto font.
+    fontFamily: [
+      "-apple-system",
+      "BlinkMacSystemFont",
+      '"Segoe UI"',
+      "Roboto",
+      '"Helvetica Neue"',
+      "Arial",
+      "sans-serif",
+      '"Apple Color Emoji"',
+      '"Segoe UI Emoji"',
+      '"Segoe UI Symbol"',
+    ].join(","),
+    subtitle1: {
+      fontSize: 12,
+    },
+    body1: {
+      fontWeight: 500,
+    },
+    button: {
+      fontStyle: "italic",
+    },
+    h3: {
+      color: "white",
+    },
+    h4: {
+      color: "white",
+    },
+  },
+  label: {
+    // fontFamily: theme.typography.fontFamily,
+    fontSize: "22px",
+    // opacity: 1,
+    // transition: 'font-size 0.2s, opacity 0.2s',
+    // transitionDelay: '0.1s',
+    // '&$iconOnly': {
+    //   opacity: 0,
+    //   transitionDelay: '0s',
+    // },
+    // '&$selected': {
+    //   fontSize: theme.typography.pxToRem(14),
+    // },
+    // color: "white",
   },
 }));
 
@@ -64,7 +180,7 @@ export default function FullWidthTabs() {
   return (
     <div className={classes.root}>
       <AppBar position="static" color="default">
-      <Typography
+        <Typography
           style={{
             fontFamily: "Luckiest Guy",
             color: "yellow",
@@ -85,56 +201,155 @@ export default function FullWidthTabs() {
           variant="fullWidth"
           aria-label="full width tabs example"
         >
-          <Tab label="Art" {...a11yProps(0)} />
-          <Tab label="CAD" {...a11yProps(1)} />
-          <Tab label="Events/Promotions" {...a11yProps(2)} />
+          <Tab className={classes.label} label="Art" {...a11yProps(0)} />
+          <Tab className={classes.label} label="CAD" {...a11yProps(1)} />
+          <Tab
+            className={classes.label}
+            label="Events/Promotions"
+            {...a11yProps(2)}
+          />
         </Tabs>
       </AppBar>
       <SwipeableViews
-        axis={theme.direction === 'rtl' ? 'x-reverse' : 'x'}
+        axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
         <TabPanel value={value} index={0} dir={theme.direction}>
-        <div className={classes.container}>
-      <main className={classes.main}>
-        {/* <div className={classes.heroContent} >  */}
-        <img  className={classes.heroContent}src="/img/hero.bmp" />
-        {/* </div> */}
-        {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
-        {/* <Box m={5}></Box> */}
-        {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
+          <div className={classes.container}>
+            <main className={classes.main}>
+              {/* <div className={classes.heroContent} >  */}
+              <img className={classes.heroContent} src="/img/hero.bmp" />
+              {/* </div> */}
+              {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
+              {/* <Box m={5}></Box> */}
+              {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
           Invenire Studios
         </Typography> */}
-        {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
-        <Typography variant="h4" align="center" color="white" component="p">
-          Art
-        </Typography>
-        <br/><br/>
-      </main>
-    </div>
+              {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
+              <Typography
+                variant="h4"
+                align="center"
+                color="white"
+                component="p"
+              >
+                Art
+              </Typography>
+              <br />
+              <br />
+              <Grid container>
+                <Grid item xs={6}>
+                  <ImgMediaCard
+                    title="art 1"
+                    description="on display at Level Up"
+                    condition="on display"
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard
+                    title="art 2"
+                    description="on display at Level Up"
+                    condition="on display"
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard
+                    title="art 3"
+                    description="on display at Level Up"
+                    condition="on display"
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard
+                    title="art 2"
+                    description="on display at Level Up"
+                    condition="on display"
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard
+                    title="art 3"
+                    description="on display at River Drifters"
+                    condition="on display"
+                  />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard
+                    title="art 3"
+                    description="on display at River Drifters"
+                    condition="on display"
+                  />
+                </Grid>
+              </Grid>
+            </main>
+          </div>
         </TabPanel>
         <TabPanel value={value} index={1} dir={theme.direction}>
-        <div className={classes.container}>
-      <main className={classes.main}>
-        {/* <div className={classes.heroContent} >  */}
-        <img  className={classes.heroContent}src="/img/mnriser.bmp" />
-        {/* </div> */}
-        {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
-        {/* <Box m={5}></Box> */}
-        {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
+          <div className={classes.container}>
+            <main className={classes.main}>
+              {/* <div className={classes.heroContent} >  */}
+              <img className={classes.heroContent} src="/img/mnriser.bmp" />
+              {/* </div> */}
+              {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
+              {/* <Box m={5}></Box> */}
+              {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
           Invenire Studios
         </Typography> */}
-        {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
-        <Typography variant="h4" align="center" color="white" component="p">
-          Art
-        </Typography>
-        <br/><br/>
-      </main>
-    </div>
+              {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
+              <Typography
+                variant="h4"
+                align="center"
+                color="white"
+                component="p"
+              >
+                Art
+              </Typography>
+              <br />
+              <br />
+              <Grid container>
+                <Grid item xs={6}>
+                  <ImgMediaCard />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard />
+                </Grid>
+                <Grid item xs={6}>
+                  <ImgMediaCard />
+                </Grid>
+              </Grid>
+            </main>
+          </div>
         </TabPanel>
         <TabPanel value={value} index={2} dir={theme.direction}>
-          Events and promotions
+          <div className={classes.container}>
+            <main className={classes.main}>
+              {/* <div className={classes.heroContent} >  */}
+              <img className={classes.heroContent} src="/img/mnriser.bmp" />
+              {/* </div> */}
+              {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
+              {/* <Box m={5}></Box> */}
+              {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
+          Invenire Studios
+        </Typography> */}
+              {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
+              <Typography
+                variant="h4"
+                align="center"
+                color="white"
+                component="p"
+              >
+                Events and Promations
+              </Typography>
+              <br />
+              <br />
+            </main>
+          </div>
         </TabPanel>
       </SwipeableViews>
     </div>

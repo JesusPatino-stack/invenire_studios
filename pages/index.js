@@ -17,9 +17,9 @@ import useScrollTrigger from "@material-ui/core/useScrollTrigger";
 import Slide from "@material-ui/core/Slide";
 import BottomNavigation from "@material-ui/core/BottomNavigation";
 import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
-import Paper from '@material-ui/core/Paper';
-import Tabs from '@material-ui/core/Tabs';
-import Tab from '@material-ui/core/Tab';
+import Paper from "@material-ui/core/Paper";
+import Tabs from "@material-ui/core/Tabs";
+import Tab from "@material-ui/core/Tab";
 // import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 // let theme = createMuiTheme();
 // theme = responsiveFontSizes(theme);
@@ -49,18 +49,18 @@ HideOnScroll.propTypes = {
 
 export default function Home() {
   const classes = useStyles();
-  
+
   return (
-    // <ThemeProvider theme={theme}> 
+    // <ThemeProvider theme={theme}>
     <>
-  <Head>
+      <Head>
         <title>Invenire Studios</title>
         <meta name="description" content="Portfolio" />
         <link rel="icon" href="/favicon.ico" />
       </Head>
-    <Tabinator />
+      <Tabinator />
 
-    <Footer />
+      <Footer />
     </>
     // </ThemeProvider>
   );
@@ -70,21 +70,44 @@ function Footer() {
   const classes = useStyles();
   return (
     <>
-    <br/>
-    {/* <Typography variant="h4" align="center" gutterBottom color="white" >
+      <br />
+      {/* <Typography variant="h4" align="center" gutterBottom color="white" >
         Contact
       </Typography> */}
-    <footer className={classes.footer}>
-      <Typography variant="h4" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-       <Face/>   Neal Butler
-      </Typography>
-      <Typography variant="h4" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-        <Mail/><a href="mailto:InvenireStudios@gmail.com">  InvenireStudios@gmail.com</a>
-      </Typography>
-      <Typography variant="h4" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-      <PhoneIcon /><a href="tel:7064638523">   706.463.8523</a>
-      </Typography>
-    </footer>
+      <footer className={classes.footer}>
+        <Typography
+          variant="h4"
+          align="center"
+          color="white"
+          component="p"
+          style={{ margin: "auto", padding: "10px" }}
+        >
+          <Face /> Neal Butler
+        </Typography>
+        <Typography
+          variant="h4"
+          align="center"
+          color="white"
+          component="p"
+          style={{ margin: "auto", padding: "10px" }}
+        >
+          <Mail />
+          <a href="mailto:InvenireStudios@gmail.com">
+            {" "}
+            InvenireStudios@gmail.com
+          </a>
+        </Typography>
+        <Typography
+          variant="h4"
+          align="center"
+          color="white"
+          component="p"
+          style={{ margin: "auto", padding: "10px" }}
+        >
+          <PhoneIcon />
+          <a href="tel:7064638523"> 706.463.8523</a>
+        </Typography>
+      </footer>
     </>
   );
 }
@@ -99,8 +122,9 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "80vh",
     backgroundColor: "#f5f5f5",
-    verticalAlign: 'top',
-    maxWidth: '100%'
+    verticalAlign: "top",
+    maxWidth: "100%",
+    // minHeight:'100vh'
   },
   main: {
     // padding: "5rem 0",
@@ -122,8 +146,8 @@ const useStyles = makeStyles((theme) => ({
     // height:"100rem",
     width: "100%",
     // alignContent: 'center',
-    verticalAlign: 'top',
-    objectFit: 'cover'
+    verticalAlign: "top",
+    objectFit: "cover",
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -145,12 +169,25 @@ const useStyles = makeStyles((theme) => ({
   },
   footer: {
     backgroundColor: "#273238",
-    color: "white",
-    padding: theme.spacing(6),
-    width: "100%",
-    display: "flex",
-    flexDirection: "row",
-    alignVertical: "center"
+    // color: "white",
+    // padding: theme.spacing(6),
+    // width: "100%",
+    // display: "flex",
+    // flexDirection: "row",
+    // alignVertical: "center",
+    // position: 'absolute',
+    // bottom: 0,
+    // height: '100px'
+  //   textAlign: 'center',
+  // position: 'absolute',
+  // bottom: 0,
+  // width: '100%',
+  // height: '100px',
+  // background: '#6cf',
+  flexShrink: 0,
+  textAlign: 'center',
+  // backgroundColor: 'tomato',
+  color: 'white'
   },
   title: {
     font: "Roboto",
@@ -201,7 +238,6 @@ const useStyles = makeStyles((theme) => ({
     // '&$selected': {
     //   fontSize: theme.typography.pxToRem(14),
     // },
-     color: "white"
+    color: "white",
   },
- 
 }));
