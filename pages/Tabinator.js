@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
   },
   label: {
     fontFamily: "Luckiest Guy",
-    fontSize: "32px",
+    fontSize: "36px",
     // opacity: 1,
     // transition: 'font-size 0.2s, opacity 0.2s',
     // transitionDelay: '0.1s',
