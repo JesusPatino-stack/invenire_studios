@@ -75,11 +75,11 @@ export function SimpleBottomNavigation() {
         setValue(newValue);
       }}
       showLabels
-      className={classes.root}
-      style={{ background: "black" }}
+     className={classes.label}
+      style={{ background: "black", fontSize: '20px' }}
     >
       <BottomNavigationAction label="Art" style={{ color: "white" }} />
-      <BottomNavigationAction label="CAD" style={{ color: "white" }} />
+      <BottomNavigationAction label="CAD" style={{ color: "white"}} />
       <BottomNavigationAction label="Events/Promotions" style={{ color: "white" }} />
     </BottomNavigation>
   );
@@ -96,9 +96,9 @@ export default function Home() {
       </Head>
       <HideAppBar />
       <main className={classes.main}>
-        {/* <div className={classes.heroContent} >  */}
-        <img className={classes.heroContent} src="/img/hero.bmp" />
-        {/* </div> */}
+        <div className={classes.heroContent} > 
+        <img  src="/img/hero.bmp" />
+        </div>
         {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
         {/* <Box m={5}></Box> */}
         {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
@@ -108,6 +108,7 @@ export default function Home() {
         <Typography variant="h4" align="center" color="white" component="p">
           Artist and Technologist
         </Typography>
+        <br/><br/>
         <Footer />
       </main>
     </div>
@@ -118,20 +119,24 @@ export default function Home() {
 function Footer() {
   const classes = useStyles();
   return (
-    <footer className={classes.footer}>
-      {/* <Typography variant="h5" align="center" gutterBottom>
+    <>
+    <br/>
+    <Typography variant="h4" align="center" gutterBottom color="white" >
         Contact
-      </Typography> */}
+      </Typography>
+    <footer className={classes.footer}>
       <Typography variant="h5" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
         Neal Butler
       </Typography>
       <Typography variant="h5" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-        <a href="tel:7064638523">706.463.8523</a>
+        <a href="mailto:InvenireStudios@gmail.com">InvenireStudios@gmail.com</a>
       </Typography>
       <Typography variant="h5" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
-        <a href="">InvenireStudios@gmail.com</a>
+        <a href="tel:7064638523">706.463.8523</a>
       </Typography>
+      
     </footer>
+    </>
   );
 }
 
@@ -145,9 +150,10 @@ const useStyles = makeStyles((theme) => ({
     alignItems: "center",
     height: "100%",
     backgroundColor: "gray",
+    verticalAlign: 'top'
   },
   main: {
-    padding: "5rem 0",
+    // padding: "5rem 0",
     flex: "1",
     display: "flex",
     flexDirection: "column",
@@ -162,11 +168,11 @@ const useStyles = makeStyles((theme) => ({
   },
   heroContent: {
     backgroundColor: "gray",
-    padding: theme.spacing(8, 0, 6),
+    // padding: theme.spacing(8, 0, 6),
     // height:"100rem",
     width: "100%",
     // alignContent: 'center',
-    // verticalAlign: 'top'
+    verticalAlign: 'top'
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -229,6 +235,20 @@ const useStyles = makeStyles((theme) => ({
     },
     h4: {
       color: "white",
+    },
+  },
+  label: {
+    fontFamily: theme.typography.fontFamily,
+    fontSize: theme.typography.pxToRem(20),
+    opacity: 1,
+    transition: 'font-size 0.2s, opacity 0.2s',
+    transitionDelay: '0.1s',
+    '&$iconOnly': {
+      opacity: 0,
+      transitionDelay: '0s',
+    },
+    '&$selected': {
+      fontSize: theme.typography.pxToRem(14),
     },
   },
 }));
