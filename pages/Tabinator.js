@@ -148,8 +148,8 @@ const useStyles = makeStyles((theme) => ({
     },
   },
   label: {
-    // fontFamily: theme.typography.fontFamily,
-    fontSize: "30px",
+    fontFamily: "Luckiest Guy",
+    fontSize: "32px",
     // opacity: 1,
     // transition: 'font-size 0.2s, opacity 0.2s',
     // transitionDelay: '0.1s',
@@ -161,7 +161,8 @@ const useStyles = makeStyles((theme) => ({
     //   fontSize: theme.typography.pxToRem(14),
     // },
     color: "white",
-    backgroundColor: "black"
+    backgroundColor: "black",
+
   },
 }));
 
