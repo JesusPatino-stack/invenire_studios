@@ -149,7 +149,7 @@ const useStyles = makeStyles((theme) => ({
   },
   label: {
     // fontFamily: theme.typography.fontFamily,
-    fontSize: "22px",
+    fontSize: "30px",
     // opacity: 1,
     // transition: 'font-size 0.2s, opacity 0.2s',
     // transitionDelay: '0.1s',
