@@ -32,10 +32,10 @@ export default function CenteredTabs() {
           style={{
             fontFamily: "Luckiest Guy",
             color: "yellow",
-            textShadow: "2px 2px #000",
+            textShadow: "4px 4px #000",
             backgroundImage: `url(${"/img/hero.bmp"})`,
             width: "100%",
-            fontSize: "32px",
+            fontSize: "5rem",
             padding: "10px",
           }}
         >
