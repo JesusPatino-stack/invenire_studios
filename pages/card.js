@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 export default function ImgMediaCard(props) {
-    const {title, description, condition} = props
+    const {img, title, description, condition} = props
   const classes = useStyles();
 
   return (
@@ -25,7 +25,7 @@ export default function ImgMediaCard(props) {
           component="img"
           alt="Contemplative Reptile"
           height="140"
-          image="/img/contemplative-reptile.jpg"
+          image={img}
           title="Contemplative Reptile"
         />
         <CardContent>
@@ -39,13 +39,10 @@ export default function ImgMediaCard(props) {
       </CardActionArea>
       <CardActions>
         <Button size="small" color="primary">
-          <a href="https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!3m1!4b1!4m5!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407">{condition}</a>
+          <a href="https://maps.google.com/?q=3801 Ringgold Rd, East Ridge, TN 37412&t=m">{condition}</a>
         </Button>
         <Button size="small" color="primary">
-          Buy Print
-        </Button>
-        <Button size="small" color="primary">
-          Learn More
+          <a href="https://www.etsy.com">Buy Print</a>
         </Button>
       </CardActions>
     </Card>
