@@ -211,7 +211,7 @@ export default function FullWidthTabs() {
           />
           <Tab
             className={classes.label}
-            label="Events/Promotions"
+            label="Events/Promos"
             {...a11yProps(2)}
           />
         </Tabs>
