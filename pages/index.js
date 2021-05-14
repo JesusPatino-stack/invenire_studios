@@ -74,9 +74,10 @@ export default function Home() {
           Artist and Technologist
         </Typography>
         <br/><br/>
-        <Footer />
+        
       </main>
     </div>
+    <Footer />
     </>
     // </ThemeProvider>
   );
