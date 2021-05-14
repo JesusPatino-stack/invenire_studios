@@ -191,6 +191,10 @@ export default function FullWidthTabs() {
             width: "100%",
             fontSize: "5rem",
             padding: "15px",
+            display: "flex",
+            flexDirection: "column",
+            justifyContent: "center",
+            alignItems: "center",
           }}
         >
           Invenire Studios
