@@ -29,19 +29,19 @@ export default function ImgMediaCard(props) {
           title="Contemplative Reptile"
         />
         <CardContent>
-          <Typography gutterBottom variant="h5" component="h2">
+          <Typography gutterBottom variant="h3" component="h2">
             {title}
           </Typography>
-          <Typography variant="body2" color="textSecondary" component="p">
+          <Typography variant="body1" color="textSecondary" component="p">
             {description}
           </Typography>
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="small" color="primary">
+        <Button size="large" color="primary">
           <a href="https://maps.google.com/?q=3801 Ringgold Rd, East Ridge, TN 37412&t=m">{condition}</a>
         </Button>
-        <Button size="small" color="primary">
+        <Button size="large" color="primary">
           <a href="https://www.etsy.com">Buy Print</a>
         </Button>
       </CardActions>
