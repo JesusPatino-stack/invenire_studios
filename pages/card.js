@@ -39,10 +39,10 @@ export default function ImgMediaCard(props) {
       </CardActionArea>
       <CardActions>
         <Button size="large" color="primary">
-          <a href="https://maps.google.com/?q=3801 Ringgold Rd, East Ridge, TN 37412&t=m">{condition}</a>
+          <a href="https://maps.google.com/?q=3801 Ringgold Rd, East Ridge, TN 37412&t=m" target="_blank" rel="noopener">{condition}</a>
         </Button>
         <Button size="large" color="primary">
-          <a href="https://www.etsy.com">Buy Print</a>
+          <a href="https://www.etsy.com" target="_blank" rel="noopener">Buy Print</a>
         </Button>
       </CardActions>
     </Card>
