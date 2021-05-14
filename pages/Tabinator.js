@@ -290,7 +290,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://gph.is/g/Zr5DY1l"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
@@ -308,7 +308,7 @@ export default function FullWidthTabs() {
                 <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
                   {" "}
                   <ImgMediaCard
-                    img="/img/contemplative-reptile.jpg"
+                    img="https://gph.is/g/Zl1GeWg"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
