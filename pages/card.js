@@ -10,7 +10,7 @@ import Typography from '@material-ui/core/Typography';
 
 const useStyles = makeStyles({
   root: {
-    maxWidth: 345,
+    maxWidth: 600,
   },
 });
 
@@ -24,7 +24,7 @@ export default function ImgMediaCard(props) {
         <CardMedia
           component="img"
           alt="Contemplative Reptile"
-          height="140"
+          height="250"
           image={img}
           title="Contemplative Reptile"
         />

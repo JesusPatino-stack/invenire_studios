@@ -162,7 +162,6 @@ const useStyles = makeStyles((theme) => ({
     // },
     color: "white",
     backgroundColor: "black",
-
   },
 }));
 
@@ -208,11 +207,7 @@ export default function FullWidthTabs() {
           aria-label="full width tabs example"
         >
           <Tab className={classes.label} label="Art" {...a11yProps(0)} />
-          <Tab
-            className={classes.label}
-            label="CAD" 
-            {...a11yProps(1)} 
-          />
+          <Tab className={classes.label} label="CAD" {...a11yProps(1)} />
           <Tab
             className={classes.label}
             label="Events/Promos"
@@ -229,81 +224,91 @@ export default function FullWidthTabs() {
           <div className={classes.container}>
             <main className={classes.main}>
               <Grid container spacing={5}>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/hero.bmp"
+                    img="/img/hero.bmp"
                     title="art 1"
                     description="on display at Level Up"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 2"
                     description="on display at Level Up"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 3"
                     description="on display at Level Up"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 2"
                     description="on display at Level Up"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
                   />
                 </Grid>
-                <Grid item sm={12} xs={6} md={4} lg={3} zeroMinWidth>
+                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
+                  {" "}
                   <ImgMediaCard
-                  img="/img/contemplative-reptile.jpg"
+                    img="/img/contemplative-reptile.jpg"
                     title="art 3"
                     description="on display at River Drifters"
                     condition="on display"
