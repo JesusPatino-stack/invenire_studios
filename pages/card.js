@@ -39,7 +39,7 @@ export default function ImgMediaCard(props) {
       </CardActionArea>
       <CardActions>
         <Button size="large" color="primary">
-          <a href="https://maps.google.com/?q=3801 Ringgold Rd, East Ridge, TN 37412&t=m" target="_blank" rel="noopener">{condition}</a>
+          <a href="https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407" target="_blank" rel="noopener">{condition}</a>
         </Button>
         <Button size="large" color="primary">
           <a href="https://www.etsy.com" target="_blank" rel="noopener">Buy Print</a>
