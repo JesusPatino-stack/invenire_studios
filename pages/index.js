@@ -60,7 +60,7 @@ function HideAppBar(props) {
       </HideOnScroll>
 
       <hr />
-      
+
     </>
   );
 }
@@ -97,9 +97,9 @@ export default function Home() {
       </Head>
       <HideAppBar />
       <main className={classes.main}>
-        <div className={classes.heroContent} > 
-        <img  src="/img/hero.bmp" />
-        </div>
+        {/* <div className={classes.heroContent} >  */}
+        <img  className={classes.heroContent}src="/img/hero.bmp" />
+        {/* </div> */}
         {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
         {/* <Box m={5}></Box> */}
         {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
@@ -122,9 +122,9 @@ function Footer() {
   return (
     <>
     <br/>
-    <Typography variant="h4" align="center" gutterBottom color="white" >
+    {/* <Typography variant="h4" align="center" gutterBottom color="white" >
         Contact
-      </Typography>
+      </Typography> */}
     <footer className={classes.footer}>
       <Typography variant="h5" align="center" color="white" component="p" style={{margin: "auto", padding:'10px'}}>
         Neal Butler
@@ -149,20 +149,21 @@ const useStyles = makeStyles((theme) => ({
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
-    height: "100%",
+    height: "100vh",
     backgroundColor: "gray",
-    verticalAlign: 'top'
+    verticalAlign: 'top',
+    maxWidth: '100%'
   },
   main: {
     // padding: "5rem 0",
-    flex: "1",
+    flex: "0",
     display: "flex",
     flexDirection: "column",
     justifyContent: "center",
     alignItems: "center",
     backgroundColor: "gray",
     verticalAlign: "top",
-    maxWidth: "1080px",
+    width: "100%",
   },
   icon: {
     marginRight: theme.spacing(2),
@@ -173,7 +174,8 @@ const useStyles = makeStyles((theme) => ({
     // height:"100rem",
     width: "100%",
     // alignContent: 'center',
-    verticalAlign: 'top'
+    verticalAlign: 'top',
+    objectFit: 'cover'
   },
   heroButtons: {
     marginTop: theme.spacing(4),
@@ -194,7 +196,7 @@ const useStyles = makeStyles((theme) => ({
     flexGrow: 1,
   },
   footer: {
-    backgroundColor: "gray",
+    backgroundColor: "#273238",
     color: "white",
     padding: theme.spacing(6),
     width: "100%",
