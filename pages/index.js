@@ -49,17 +49,18 @@ function HideAppBar(props) {
     <>
       <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar style={{ background: "black", display:'flex'}}>
+        <AppBar style={{ background: "black", display:'inline'}}>
           <Toolbar>
-            <Typography variant="h6" style={{ background: "black", marginLeft: "auto", }}></Typography>
+            {/* <Typography variant="h6" style={{ background: "black", marginLeft: "auto", }}></Typography> */}
             <SimpleBottomNavigation
-              style={{ display: "flex", background: "black", marginRight: "auto", }}
+              style={{ display: "inline", background: "black", margin: "auto", }}
             />
           </Toolbar>
         </AppBar>
       </HideOnScroll>
 
       <hr />
+      
     </>
   );
 }
@@ -78,9 +79,9 @@ export function SimpleBottomNavigation() {
      className={classes.label}
       style={{ background: "black", fontSize: '20px' }}
     >
-      <BottomNavigationAction label="Art" style={{ color: "white" }} />
-      <BottomNavigationAction label="CAD" style={{ color: "white"}} />
-      <BottomNavigationAction label="Events/Promotions" style={{ color: "white" }} />
+      <BottomNavigationAction label="Art" style={{ color: "white", margin: "auto" }} />
+      <BottomNavigationAction label="CAD" style={{ color: "white", margin: "auto"}} />
+      <BottomNavigationAction label="Events/Promotions" style={{ color: "white", margin: "auto" }} />
     </BottomNavigation>
   );
 }
