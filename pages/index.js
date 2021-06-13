@@ -10,7 +10,7 @@ import Mail from "@material-ui/icons/Mail";
 import { Box } from "@material-ui/core";
 import "@fontsource/roboto";
 import PropTypes from "prop-types";
-import Tabinator from "./Tabinator";
+import Tabinator from "../components/Tabinator";
 import Toolbar from "@material-ui/core/Toolbar";
 import CssBaseline from "@material-ui/core/CssBaseline";
 import useScrollTrigger from "@material-ui/core/useScrollTrigger";
