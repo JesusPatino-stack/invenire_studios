@@ -15,6 +15,8 @@ import Menu from '@material-ui/core/Menu';
 const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
+    paddingTop: '30px',
+    backgroundColor: 'black'
   },
   menuButton: {
     marginRight: theme.spacing(2),
@@ -33,8 +35,8 @@ export default function MenuAppBar() {
   return (
     <div className={classes.root}>
       <AppBar position="static">
-        <Toolbar>
-          <Typography variant="h6" className={classes.title}>
+        <Toolbar style={{backgroundColor:'black'}}>
+          <Typography variant="h6" className={classes.title} >
             Payments and Donations
           </Typography>
             <div>
