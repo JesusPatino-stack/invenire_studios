@@ -14,6 +14,8 @@ import Art from '../components/panels/Art'
 import Cad from '../components/panels/Cad'
 import Donation from './layout/Donation'
 import Events from "./panels/Events";
+import Modal from './Modal'
+import cardValues from './cardValues'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -173,6 +175,7 @@ export default function FullWidthTabs() {
   const classes = useStyles();
   const theme = useTheme();
   const [value, setValue] = React.useState(0);
+  const card_values = cardValues()
 
   const handleChange = (event, newValue) => {
     setValue(newValue);
