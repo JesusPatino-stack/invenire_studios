@@ -181,7 +181,7 @@ export default function FullWidthTabs() {
 
   return (
     <div className={classes.root}>
-      <a href="https://cash.app/$Invenire/1.00" >Cashapp</a>
+      <a href="https://cash.app/$Invenire/1.00" target="_blank" rel="noopener">Cashapp</a>
       <AppBar position="static" color="default">
         <Typography
           style={{
