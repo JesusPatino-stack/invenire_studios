@@ -11,6 +11,7 @@ import "@fontsource/luckiest-guy";
 import ImgMediaCard from "./card";
 import { Grid } from "@material-ui/core";
 import Art from '../components/panels/Art'
+import Donation from './layout/Donation'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -181,7 +182,7 @@ export default function FullWidthTabs() {
 
   return (
     <div className={classes.root}>
-      <a href="https://cash.app/$Invenire/1.00" target="_blank" rel="noopener">Cashapp</a>
+      <Donation />
       <AppBar position="static" color="default">
         <Typography
           style={{
