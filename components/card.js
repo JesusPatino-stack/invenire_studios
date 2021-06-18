@@ -38,10 +38,10 @@ export default function ImgMediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        {condition !== 'venue location' ? <Button size="large" color="primary">
+        {condition === 'venue location' ? <Button size="large" color="primary">
           <a href={g_maps} target="_blank" rel="noopener">{condition}</a>
         </Button> : null}
-        {condition !== 'contact me' ? <Button size="large" color="primary">
+        {condition === 'contact me' ? <Button size="large" color="primary">
           <a href="mailto:abstractsplashing@gmail.com">{condition}</a>
         </Button> : null}
         {/* <Button size="large" color="primary">
