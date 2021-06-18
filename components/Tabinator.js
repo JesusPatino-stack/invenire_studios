@@ -11,7 +11,9 @@ import "@fontsource/luckiest-guy";
 import ImgMediaCard from "./card";
 import { Grid } from "@material-ui/core";
 import Art from '../components/panels/Art'
+import Cad from '../components/panels/Cad'
 import Donation from './layout/Donation'
+import Events from "./panels/Events";
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -224,73 +226,8 @@ export default function FullWidthTabs() {
         onChangeIndex={handleChangeIndex}
       >
         <Art value={value}/>
-        <TabPanel value={value} index={1} dir={theme.direction}>
-          <div className={classes.container}>
-            <main className={classes.main}>
-              {/* <div className={classes.heroContent} >  */}
-              <img className={classes.heroContent} src="/img/mnriser.bmp" />
-              {/* </div> */}
-              {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
-              {/* <Box m={5}></Box> */}
-              {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
-          Invenire Studios
-        </Typography> */}
-              {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
-              <Typography
-                variant="h4"
-                align="center"
-                color="white"
-                component="p"
-              >
-                Art
-              </Typography>
-              <br />
-              <br />
-              <Grid container>
-                <Grid item xs={6}>
-                  <ImgMediaCard />
-                </Grid>
-                <Grid item xs={6}>
-                  <ImgMediaCard />
-                </Grid>
-                <Grid item xs={6}>
-                  <ImgMediaCard />
-                </Grid>
-                <Grid item xs={6}>
-                  <ImgMediaCard />
-                </Grid>
-                <Grid item xs={6}>
-                  <ImgMediaCard />
-                </Grid>
-              </Grid>
-            </main>
-          </div>
-        </TabPanel>
-        <TabPanel value={value} index={2} dir={theme.direction}>
-          <div className={classes.container}>
-            <main className={classes.main}>
-              {/* <div className={classes.heroContent} >  */}
-              <img className={classes.heroContent} src="/img/mnriser.bmp" />
-              {/* </div> */}
-              {/* <Image src="/img/hero.bmp" alt="hero" layout="fill" /></div> */}
-              {/* <Box m={5}></Box> */}
-              {/* <Typography variant="h1" align="center" gutterBottom className={classes.title}>
-          Invenire Studios
-        </Typography> */}
-              {/* <Image src="/img/hero.bmp" alt="hero" width={600} height={500} /> */}
-              <Typography
-                variant="h4"
-                align="center"
-                color="white"
-                component="p"
-              >
-                Events and Promations
-              </Typography>
-              <br />
-              <br />
-            </main>
-          </div>
-        </TabPanel>
+        <Cad value={value} />
+        <Events value={value} />
       </SwipeableViews>
     </div>
   );

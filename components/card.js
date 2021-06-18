@@ -15,7 +15,7 @@ const useStyles = makeStyles({
 });
 
 export default function ImgMediaCard(props) {
-    const {img, title, description, condition, g_maps} = props
+    const {img, title, description, condition, g_maps, get_tickets} = props
   const classes = useStyles();
 
   return (
@@ -41,6 +41,12 @@ export default function ImgMediaCard(props) {
         {condition === 'venue location' ? <Button size="large" color="primary">
           <a href={g_maps} target="_blank" rel="noopener">{condition}</a>
         </Button> : null}
+        {condition === 'wanderlinger' ? <><Button size="large" color="primary">
+          <a href={g_maps} target="_blank" rel="noopener">VENUE LOCATION</a>
+        </Button>
+        <Button size="large" color="primary">
+        <a href={get_tickets}>Get Tickets</a>
+      </Button></> : null}
         {condition === 'contact me' ? <Button size="large" color="primary">
           <a href="mailto:abstractsplashing@gmail.com">{condition}</a>
         </Button> : null}
