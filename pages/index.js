@@ -20,6 +20,7 @@ import BottomNavigationAction from "@material-ui/core/BottomNavigationAction";
 import Paper from "@material-ui/core/Paper";
 import Tabs from "@material-ui/core/Tabs";
 import Tab from "@material-ui/core/Tab";
+import Footer from '../components/layout/Footer'
 // import { createMuiTheme, responsiveFontSizes } from '@material-ui/core/styles';
 // let theme = createMuiTheme();
 // theme = responsiveFontSizes(theme);
@@ -63,52 +64,6 @@ export default function Home() {
       <Footer />
     </>
     // </ThemeProvider>
-  );
-}
-
-function Footer() {
-  const classes = useStyles();
-  return (
-    <>
-      <br />
-      {/* <Typography variant="h4" align="center" gutterBottom color="white" >
-        Contact
-      </Typography> */}
-      <footer className={classes.footer}>
-        <Typography
-          variant="h4"
-          align="center"
-          color="white"
-          component="p"
-          style={{ margin: "auto", padding: "10px" }}
-        >
-          <Face /> Neal Butler
-        </Typography>
-        <Typography
-          variant="h4"
-          align="center"
-          color="white"
-          component="p"
-          style={{ margin: "auto", padding: "10px" }}
-        >
-          <Mail />
-          <a href="mailto:InvenireStudios@gmail.com">
-            {" "}
-            InvenireStudios@gmail.com
-          </a>
-        </Typography>
-        <Typography
-          variant="h4"
-          align="center"
-          color="white"
-          component="p"
-          style={{ margin: "auto", padding: "10px" }}
-        >
-          <PhoneIcon />
-          <a href="tel:7064638523"> 706.463.8523</a>
-        </Typography>
-      </footer>
-    </>
   );
 }
 

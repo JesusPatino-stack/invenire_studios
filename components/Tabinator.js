@@ -10,6 +10,7 @@ import Box from "@material-ui/core/Box";
 import "@fontsource/luckiest-guy";
 import ImgMediaCard from "./card";
 import { Grid } from "@material-ui/core";
+import Art from '../components/panels/Art'
 
 function TabPanel(props) {
   const { children, value, index, ...other } = props;
@@ -180,6 +181,7 @@ export default function FullWidthTabs() {
 
   return (
     <div className={classes.root}>
+      <a href="https://cash.app/$Invenire/1.00" >Cashapp</a>
       <AppBar position="static" color="default">
         <Typography
           style={{
@@ -214,109 +216,13 @@ export default function FullWidthTabs() {
             {...a11yProps(2)}
           />
         </Tabs>
-      </AppBar>
+      </AppBar> 
       <SwipeableViews
         axis={theme.direction === "rtl" ? "x-reverse" : "x"}
         index={value}
         onChangeIndex={handleChangeIndex}
       >
-        <TabPanel value={value} index={0} dir={theme.direction}>
-          <div className={classes.container}>
-            <main className={classes.main}>
-              <Grid container spacing={5}>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/bugs_behind_the_screen.gif"
-                    title="Bugs Behind The Screen"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/cats.gif"
-                    title="Cats"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/earth_and_sky.gif"
-                    title="Earth and Sky"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/electric_ice.gif"
-                    title="Electric Ice"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/entangelment_in_blue.gif"
-                    title="Entanglement"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/mary_and_the_devil.gif"
-                    title="Mary and the Devil"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/puzzle.gif"
-                    title="Puzzle"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/jpg/idea_formation.jpg"
-                    title="Formation of Ideas"
-                    description="not on display"
-                    condition="avaliable"
-                    g_maps=''
-
-                  />
-                </Grid>
-                <Grid item sm={12} xs={8} md={6} lg={4} zeroMinWidth>
-                  <ImgMediaCard
-                    img="/img/paintings/gif/hurricane.gif"
-                    title="Hurricane"
-                    description="on display at Level Up"
-                    condition="on display"
-                    g_maps='https://www.google.com/maps/place/Level+Up+Arcade+and+Billiards/@34.999782,-85.2584417,17z/data=!4m13!1m7!3m6!1s0x88606772239c2303:0x4b1bc5421cb3a9be!2s3801+Ringgold+Rd,+Chattanooga,+TN+37412!3b1!8m2!3d34.999782!4d-85.256253!3m4!1s0x88606786be179a13:0xddbc1ca807d0bf19!8m2!3d35.0001654!4d-85.2569407'
-
-                  />
-                </Grid>
-              </Grid>
-            </main>
-          </div>
-        </TabPanel>
+        <Art value={value}/>
         <TabPanel value={value} index={1} dir={theme.direction}>
           <div className={classes.container}>
             <main className={classes.main}>

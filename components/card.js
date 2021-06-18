@@ -38,12 +38,15 @@ export default function ImgMediaCard(props) {
         </CardContent>
       </CardActionArea>
       <CardActions>
-        <Button size="large" color="primary">
+        {condition !== 'venue location' ? <Button size="large" color="primary">
           <a href={g_maps} target="_blank" rel="noopener">{condition}</a>
-        </Button>
-        <Button size="large" color="primary">
+        </Button> : null}
+        {condition !== 'contact me' ? <Button size="large" color="primary">
+          <a href="mailto:abstractsplashing@gmail.com">{condition}</a>
+        </Button> : null}
+        {/* <Button size="large" color="primary">
           <a href="https://www.etsy.com" target="_blank" rel="noopener">Buy Print</a>
-        </Button>
+        </Button> */}
       </CardActions>
     </Card>
   );
