@@ -35,7 +35,7 @@ export default function MenuAppBar() {
       <AppBar position="static">
         <Toolbar>
           <Typography variant="h6" className={classes.title}>
-            Donations are welcome
+            Payments and Donations
           </Typography>
             <div>
               <IconButton
