@@ -16,6 +16,7 @@ const useStyles = makeStyles((theme) => ({
   root: {
     flexGrow: 1,
     paddingTop: '30px',
+    paddingBottom: '30px',
     backgroundColor: 'black'
   },
   menuButton: {
