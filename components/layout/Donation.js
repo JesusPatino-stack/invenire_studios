@@ -49,6 +49,15 @@ export default function MenuAppBar() {
                 <a href="https://cash.app/$Invenire/1.00" target="_blank" rel="noopener">Cashapp</a>
               </IconButton>
             </div>
+            <div>
+              <IconButton
+                aria-label="account of current user"
+                aria-controls="menu-appbar"
+                color="inherit"
+              >
+                <a href="venmo://paycharge?txn=pay&recipients=Jesus-Patino-25&amount=9.99&note=For%20Things" target="_blank" rel="noopener">Venmo</a>
+              </IconButton>
+            </div>
         </Toolbar>
       </AppBar>
     </div>
