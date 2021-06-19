@@ -1,4 +1,4 @@
-export default function card_values() {
+export default function getPaintings() {
     return (
         [
             {
