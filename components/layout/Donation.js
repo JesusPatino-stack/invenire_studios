@@ -38,7 +38,7 @@ export default function MenuAppBar() {
       <AppBar position="static">
         <Toolbar style={{backgroundColor:'black'}}>
           <Typography variant="h6" className={classes.title} >
-            Payments and Donations
+            Payments and Tip-Jar
           </Typography>
             <div>
               <IconButton
