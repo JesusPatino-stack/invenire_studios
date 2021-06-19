@@ -55,7 +55,7 @@ export default function MenuAppBar() {
                 aria-controls="menu-appbar"
                 color="inherit"
               >
-                <a href="venmo://paycharge?txn=pay&recipients=Invenire-Studios&amount=1.00&note=For%20Things" target="_blank" rel="noopener">Venmo</a>
+                <a href="venmo://paycharge?txn=pay&recipients=Invenire&amount=1.00&note=For%20Things" target="_blank" rel="noopener">Venmo</a>
               </IconButton>
             </div>
         </Toolbar>
