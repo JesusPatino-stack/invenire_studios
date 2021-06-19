@@ -14,7 +14,7 @@ import Fade from '@material-ui/core/Fade';
 
 const useStyles = makeStyles((theme) => ({
   root: {
-    maxWidth: '80%',
+    maxWidth: 600,
   },
   modal: {
     display: 'flex',
@@ -96,7 +96,7 @@ export default function EmbededVideoMediaCard(props) {
       >
         <Fade in={open}>
           <div className={classes.paper}>
-          <iframe width="1280" height="720" src="https://www.youtube.com/embed/3RiCdxtwx3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            <h2 id="transition-modal-title">{title}</h2>
+          <iframe width="600" height="337" src="https://www.youtube.com/embed/3RiCdxtwx3Q" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>            <h2 id="transition-modal-title">{title}</h2>
             {/* <p id="transition-modal-description">react-transition-group animates me.</p> */}
           </div>
         </Fade>

@@ -3,7 +3,7 @@ export default function getSculptures() {
         [
             {
                 title:"Scatter ball",
-                img:"/img/paintings/jpg/1.jpg",
+                img:"/img/paintings/jpg/scatter_ball.jpg",
                 src: 'https://youtube.com/embeded/3RiCdxtwx3Q',
                 description:`work in progress`,
                 // condition:"wanderlinger",
