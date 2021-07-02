@@ -4,7 +4,7 @@ export default function getPaintings() {
             {
                 title:"Creation",
                 img:"/img/paintings/jpg/1.jpg",
-                description:`On display @ Nightfall Concert Series in Chattanooga, TN.`,
+                description:`On display @ Nightfall Concert Series in Chattanooga, TN. Available for purchase for $750`,
                 condition:"nightfall",
                 get_tickets: "http://www.nightfallchattanooga.com/",
                 g_maps:'https://www.google.com/maps/place/Miller+Plaza+Pavilion/@35.0462632,-85.3110403,17z/data=!4m9!1m2!2m1!1smiller+plaza!3m5!1s0x88605e7ca27ad5d9:0x26ac3a1078187c2!8m2!3d35.0461191!4d-85.3091081!15sCgxtaWxsZXIgcGxhemGSARdub25fcHJvZml0X29yZ2FuaXphdGlvbg?hl=en',
@@ -12,17 +12,17 @@ export default function getPaintings() {
               {
                 title:"Cats",
                 img:"/img/paintings/jpg/3.jpg",
-                description:`On display @ Nightfall Concert Series in Chattanooga, TN.`,
+                description:`On display @ Nightfall Concert Series in Chattanooga, TN. Available for purchase for $400`,
                 condition:"nightfall",
-                get_tickets: "http://www.nightfallchattanooga.com/s",
+                get_tickets: "http://www.nightfallchattanooga.com/",
                 g_maps:'https://www.google.com/maps/place/Miller+Plaza+Pavilion/@35.0462632,-85.3110403,17z/data=!4m9!1m2!2m1!1smiller+plaza!3m5!1s0x88605e7ca27ad5d9:0x26ac3a1078187c2!8m2!3d35.0461191!4d-85.3091081!15sCgxtaWxsZXIgcGxhemGSARdub25fcHJvZml0X29yZ2FuaXphdGlvbg?hl=en',
               },
               {
                 title:"Entanglment",
                 img:"/img/paintings/jpg/4.jpg",
-                description:`On display @ Nightfall Concert Series in Chattanooga, TN.`,
+                description:`On display @ Nightfall Concert Series in Chattanooga, TN. Available for purchase for $650`,
                 condition:"nightfall",
-                get_tickets: "https://www.wanderlingerfest.com/tickets",
+                get_tickets: "http://www.nightfallchattanooga.com/",
                 g_maps:'https://www.google.com/maps/place/Miller+Plaza+Pavilion/@35.0462632,-85.3110403,17z/data=!4m9!1m2!2m1!1smiller+plaza!3m5!1s0x88605e7ca27ad5d9:0x26ac3a1078187c2!8m2!3d35.0461191!4d-85.3091081!15sCgxtaWxsZXIgcGxhemGSARdub25fcHJvZml0X29yZ2FuaXphdGlvbg?hl=en',
               },
               {
