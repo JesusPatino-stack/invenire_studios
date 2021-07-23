@@ -16,7 +16,7 @@ export default function getPaintings() {
               },
               {
                 title:"Circuits",
-                img:"/img/paintings/jpg/1.jpg",
+                img:"/img/paintings/jpg/circuits.jpg",
                 description:"",
                 price: '$300',
                 medium: "acrylic",
