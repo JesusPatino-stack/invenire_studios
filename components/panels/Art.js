@@ -176,8 +176,14 @@ export default function Art(props) {
                        img={card.img}
                        title={card.title}
                        description={card.description}
+                       price={card.price}
+                       medium={card.medium}
+                       dimensions={card.dimensions}
+                       venue={card.venue}
+                       venue_hours={card.venue_hours}
                        condition={card.condition}
                        g_maps={card.g_maps}
+                       
                      />
                    </Grid> 
                   ))}

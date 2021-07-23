@@ -30,7 +30,7 @@ const useStyles = makeStyles((theme) => ({
 }));
 
 export default function ImgMediaCard(props) {
-    const {img, title, description, condition, g_maps, get_tickets} = props
+    const {img, title, description, condition, g_maps, get_tickets, price, medium, venue, venue_hours, dimensions} = props
   const classes = useStyles();
 
   const [open, setOpen] = React.useState(false);
@@ -58,8 +58,23 @@ export default function ImgMediaCard(props) {
           <Typography gutterBottom variant="h4" component="h2">
             {title}
           </Typography>
-          <Typography variant="body1" color="textSecondary" component="p">
+          <Typography gutterBottom variant="h8" component="h3">
             {description}
+          </Typography>
+          <Typography variant="body1" color="textSecondary" component="p">
+            price: {price}
+          </Typography>
+          <Typography variant="body1" color="textSecondary" component="p">
+            medium: {medium}
+            <Typography variant="body1" color="textSecondary" component="p">
+            dimensions: {dimensions}
+          </Typography>
+          <Typography variant="body1" color="textSecondary" component="p">
+            venue: {venue}
+          </Typography>
+          <Typography variant="body1" color="textSecondary" component="p">
+            venue hours: {venue_hours}
+          </Typography>
           </Typography>
         </CardContent>
       </CardActionArea>
@@ -67,24 +82,11 @@ export default function ImgMediaCard(props) {
         {condition === 'venue location' ? <Button size="large" color="primary">
           <a href={g_maps} target="_blank" rel="noopener">{condition}</a>
         </Button> : null}
-        {condition === 'wanderlinger' ? <><Button size="large" color="primary">
-          <a href={g_maps} target="_blank" rel="noopener">VENUE LOCATION</a>
-        </Button>
-        <Button size="large" color="primary">
-        <a href="https://www.wanderlingerfest.com/tickets" target="_blank" rel="noopener">Get Tickets</a>
-      </Button></> : null}
       {condition === 'nightfall' ? <><Button size="large" color="primary">
           <a href={g_maps} target="_blank" rel="noopener">VENUE LOCATION</a>
         </Button>
         <Button size="large" color="primary">
         <a href="http://www.nightfallchattanooga.com/" target="_blank" rel="noopener">Nightfall</a>
-      </Button>
-      </> : null}
-      {condition === 'fourth' ? <><Button size="large" color="primary">
-          <a href='https://www.google.com/maps/place/Miller+Plaza+Pavilion/@35.0462632,-85.3110403,17z/data=!4m9!1m2!2m1!1smiller+plaza!3m5!1s0x88605e7ca27ad5d9:0x26ac3a1078187c2!8m2!3d35.0461191!4d-85.3091081!15sCgxtaWxsZXIgcGxhemGSARdub25fcHJvZml0X29yZ2FuaXphdGlvbg' target="_blank" rel="noopener">VENUE LOCATION</a>
-        </Button>
-        <Button size="large" color="primary">
-        <a href="https://www.eventbrite.com/e/fun-on-the-4th-tickets-160990267223" target="_blank" rel="noopener">Free Event</a>
       </Button>
       </> : null}
         {condition === 'contact me' ? <Button size="large" color="primary">
