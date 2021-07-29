@@ -89,6 +89,13 @@ export default function ImgMediaCard(props) {
         <a href="http://www.nightfallchattanooga.com/" target="_blank" rel="noopener">Nightfall</a>
       </Button>
       </> : null}
+      {condition === 'wanderlinger' ? <>
+      <Button size="large" color="primary">
+        <a href="http://www.wanderlinger.com/" target="_blank" rel="noopener">Wanderlinger's site</a>
+      </Button><Button size="large" color="primary">
+          <a href={g_maps} target="_blank" rel="noopener">Directions to venue</a>
+        </Button>
+      </> : null}
         {condition === 'contact me' ? <Button size="large" color="primary">
           <a href="mailto:abstractsplashing@gmail.com">{condition}</a>
         </Button> : null}
